@@ -6,6 +6,8 @@ enable_language(C)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DNXT")
 
+configure_file(${PROJECT_SOURCE_DIR}/config.h.in ${PROJECT_SOURCE_DIR}/config.h)
+
 add_library(ltl2ba STATIC
 			parse.c
 			lex.c
